@@ -2,12 +2,16 @@
 
 <div align="center">
 
+# P. RAMANAN
+
 ### Building Intelligence. Designing the Future.
 
 **AI & Machine Learning Student • Machine Learning Developer • Python Developer**
 
+<br>
+
 [![GitHub](https://img.shields.io/badge/GitHub-mrravanan03--debug-181717?style=for-the-badge&logo=github)](https://github.com/mrravanan03-debug)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-8A2BE2?style=for-the-badge&logo=vercel)](#)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ramananporchezhiyan@gmail.com)
 [![Python](https://img.shields.io/badge/Python-Developer-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Machine Learning](https://img.shields.io/badge/Machine%20Learning-AI-7B2CBF?style=for-the-badge)](#)
 
@@ -15,21 +19,25 @@
 
 ---
 
-## ✨ About This Portfolio
+## 🌌 About This Portfolio
 
-This repository contains my **interactive 3D personal portfolio website**, designed to showcase my journey in **Artificial Intelligence, Machine Learning, Python development, Data Analytics, and Generative AI**.
+This repository contains my **interactive 3D personal portfolio website**, created to showcase my journey in:
 
-The portfolio combines a modern dark visual system with:
+- Artificial Intelligence
+- Machine Learning
+- Python Development
+- Data Analytics
+- Generative AI
+- Predictive Analytics
+- Intelligent Applications
 
-- 🎨 Glassmorphism
-- 🌌 3D interfaces
-- 🧠 AI-inspired visualizations
-- ✨ Cinematic animations
-- 🌀 Interactive UI elements
-- 📊 Data-driven project showcases
-- 📱 Fully responsive design
+The website combines a futuristic visual experience with a professional portfolio structure.
 
-The goal is to create more than a traditional resume website — it is an **interactive representation of my technical journey and projects**.
+### Design Philosophy
+
+**3D + Glassmorphism + AI + Motion + Spatial UI**
+
+The goal is to go beyond a traditional resume website and create an interactive digital representation of my technical skills, projects, education, experience and continuous learning journey.
 
 ---
 
@@ -37,18 +45,17 @@ The goal is to create more than a traditional resume website — it is an **inte
 
 Hi, I'm **P. Ramanan**, an Artificial Intelligence and Machine Learning student passionate about building intelligent systems and solving real-world problems using technology.
 
-I enjoy working with:
+I enjoy transforming ideas and data into practical solutions using:
 
-- Artificial Intelligence
 - Machine Learning
+- Artificial Intelligence
 - Python
 - Data Analytics
 - Predictive Modeling
 - Recommendation Systems
 - Generative AI
-- Intelligent Applications
 
-I am continuously learning and experimenting with new technologies to transform ideas into practical solutions.
+I'm continuously learning new technologies and improving my ability to build practical AI-powered applications.
 
 ---
 
@@ -66,7 +73,7 @@ I am continuously learning and experimenting with new technologies to transform 
 
 ---
 
-# 🛠️ Technical Skills
+# 🧠 Technical Skills
 
 ## Programming
 
@@ -79,12 +86,12 @@ I am continuously learning and experimenting with new technologies to transform 
 
 ## Artificial Intelligence & Machine Learning
 
-- Machine Learning
 - Artificial Intelligence
+- Machine Learning
 - Predictive Modeling
 - Recommendation Systems
-- Generative AI
 - Computer Vision
+- Generative AI
 
 ## Data
 
@@ -119,7 +126,7 @@ A machine learning based predictive system designed to estimate train journey ti
 
 `Python` `Machine Learning` `Predictive Modeling` `Data Analysis`
 
-### Focus
+### Key Focus
 
 - Data preprocessing
 - Feature analysis
@@ -137,7 +144,7 @@ An intelligent restaurant analytics and recommendation platform using machine le
 
 `Python` `Machine Learning` `Recommendation Systems` `Data Analytics`
 
-### Focus
+### Key Focus
 
 - Restaurant data analysis
 - Recommendation logic
@@ -157,7 +164,7 @@ A Python-based phishing detection system designed to identify suspicious website
 
 `Python` `Cybersecurity` `Rule-Based Detection`
 
-### Focus
+### Key Focus
 
 - Suspicious URL analysis
 - Rule-based detection
@@ -172,7 +179,7 @@ An open-source budget tracking application designed to help users monitor income
 
 ### Technologies
 
-`Python` `Data Management` `Open Source`
+`Open Source` `Budget Management` `Data Management`
 
 ### License
 
@@ -219,7 +226,7 @@ Focus:
 
 - Data Analytics
 - Data Processing
-- Excel
+- Microsoft Excel
 - Data Visualization
 
 ---
@@ -268,91 +275,58 @@ Focus:
 
 ---
 
-# 🌐 Portfolio Features
+# ✨ Portfolio Features
 
-The portfolio website includes an interactive experience featuring:
-
-### 🎭 3D Hero Experience
-
-A futuristic AI-inspired 3D visual representing machine intelligence.
+The portfolio is designed as an interactive digital experience.
 
 ### 🧊 Glassmorphism UI
 
-Translucent glass interfaces with blur, depth and subtle lighting.
+Modern translucent glass interfaces with:
 
-### 🧠 AI Visualizations
+- Backdrop blur
+- Layered depth
+- Subtle borders
+- Soft lighting
 
-Neural-network inspired elements and futuristic data interfaces.
+### 🌌 3D AI Experience
 
-### 🌀 Motion Design
+A futuristic AI-inspired 3D visual representing:
 
-Smooth transitions, scroll animations and interactive elements.
+- Neural networks
+- Machine intelligence
+- Data connections
+- Digital systems
+
+### 🧠 AI-Inspired Visualizations
+
+Interactive visual elements inspired by:
+
+- Neural networks
+- Data systems
+- AI interfaces
+- Digital intelligence
+
+### 🎬 Cinematic Animations
+
+Smooth:
+
+- Page transitions
+- Scroll animations
+- Card interactions
+- Hover effects
+- Parallax effects
 
 ### 🖱️ Interactive Cursor
 
-Custom desktop cursor interactions for an enhanced browsing experience.
-
-### 📂 Project Showcase
-
-Interactive project cards with detailed project information.
+A custom desktop cursor with contextual interactions.
 
 ### 💻 AI Terminal
 
-A portfolio-inspired interactive terminal for exploring my skills and projects.
-
-### 📱 Responsive Design
-
-Optimized for:
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
----
-
-# 🧰 Tech Stack
-
-<div align="center">
-
-| Technology | Purpose |
-|---|---|
-| React | Frontend architecture |
-| TypeScript | Type-safe development |
-| Vite | Development & build tooling |
-| Three.js | 3D graphics |
-| React Three Fiber | React-based 3D |
-| Framer Motion | UI animations |
-| GSAP | Advanced animations |
-| Tailwind CSS | Styling |
-| JavaScript | Interactions |
-
-</div>
-
----
-
-# 📁 Project Structure
+An interactive terminal-style section that allows visitors to explore:
 
 ```text
-pramanan-portfolio/
-│
-├── public/
-│   ├── assets/
-│   ├── resume.pdf
-│   └── favicon.svg
-│
-├── src/
-│   ├── components/
-│   ├── sections/
-│   ├── 3d/
-│   ├── animations/
-│   ├── data/
-│   ├── hooks/
-│   ├── utils/
-│   └── styles/
-│
-├── index.html
-├── package.json
-├── README.md
-├── tsconfig.json
-└── vite.config.ts
+> whoami
+> skills
+> projects
+> github
+> contact
