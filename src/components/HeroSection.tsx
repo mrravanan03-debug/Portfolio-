@@ -60,7 +60,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork, onOpenResu
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-28 pb-16 md:py-24 overflow-hidden">
+    <section id="home" className="relative min-h-[100dvh] flex items-center justify-center pt-24 sm:pt-28 pb-16 md:py-24 overflow-hidden w-full max-w-full">
       {/* Background Ambient Aura (Optimized for smooth 60fps) */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <motion.div
@@ -78,7 +78,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork, onOpenResu
         <div className="absolute bottom-10 right-10 w-[350px] h-[350px] bg-[#4a4850]/15 rounded-full blur-[100px] pointer-events-none transform-gpu" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
         {/* Left Column (7 cols) */}
         <motion.div
           variants={containerVariants}
@@ -106,7 +106,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork, onOpenResu
           </motion.div>
 
           {/* Main Headline with Kinetic Animated Letters & Luminous Accents */}
-          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#e5e2e1] leading-[1.1] flex flex-col">
+          <motion.h1 variants={itemVariants} className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#e5e2e1] leading-[1.15] flex flex-col break-words">
             <span className="block text-white">
               <KineticHeadline
                 text={profile.headlineMain}
@@ -132,7 +132,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork, onOpenResu
           {/* Key Metrics Strip with Animated Counters */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-3 gap-3 py-3 px-4 rounded-xl bg-white/[0.03] border border-white/10 max-w-lg backdrop-blur-sm"
+            className="grid grid-cols-3 gap-2 sm:gap-3 py-3 px-3 sm:px-4 rounded-xl bg-white/[0.03] border border-white/10 w-full max-w-lg backdrop-blur-sm"
           >
             <div>
               <div className="text-xl sm:text-2xl font-bold font-mono text-white">
@@ -155,12 +155,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork, onOpenResu
           </motion.div>
 
           {/* Action CTAs */}
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-1">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 w-full sm:w-auto">
             <motion.button
               whileHover={{ scale: 1.04, boxShadow: '0 0 35px rgba(200, 197, 203, 0.4)' }}
               whileTap={{ scale: 0.96 }}
               onClick={onViewWork}
-              className="px-8 py-4 rounded-full bg-[#c8c5cb] text-[#141313] font-bold text-xs uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-[0_0_25px_rgba(200,197,203,0.25)] flex items-center gap-2 group cursor-pointer"
+              className="w-full sm:w-auto justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-[#c8c5cb] text-[#141313] font-bold text-xs uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-[0_0_25px_rgba(200,197,203,0.25)] flex items-center gap-2 group cursor-pointer"
             >
               <span>View My Work</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -170,7 +170,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork, onOpenResu
               whileHover={{ scale: 1.04, backgroundColor: 'rgba(255, 255, 255, 0.12)' }}
               whileTap={{ scale: 0.96 }}
               onClick={onOpenResume}
-              className="px-8 py-4 rounded-full bg-[#201f20]/70 backdrop-blur-xl border border-white/15 text-[#e5e2e1] font-semibold text-xs uppercase tracking-widest hover:border-white/30 transition-all duration-300 flex items-center gap-2.5 cursor-pointer"
+              className="w-full sm:w-auto justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-[#201f20]/70 backdrop-blur-xl border border-white/15 text-[#e5e2e1] font-semibold text-xs uppercase tracking-widest hover:border-white/30 transition-all duration-300 flex items-center gap-2.5 cursor-pointer"
             >
               <Download className="w-4 h-4 text-[#c8c5cb]" />
               <span>Download Resume</span>
@@ -178,7 +178,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork, onOpenResu
           </motion.div>
 
           {/* Social Icons Bar & Updated Email with Interactive Copy */}
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-3 border-t border-white/10 w-fit">
+          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 sm:gap-4 pt-3 border-t border-white/10 w-full sm:w-fit">
             <div className="flex items-center gap-3">
               <motion.a
                 whileHover={{ scale: 1.15, y: -2 }}
@@ -219,17 +219,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork, onOpenResu
             <motion.div
               whileHover={{ scale: 1.02 }}
               onClick={handleCopyEmail}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#201f20]/60 border border-white/10 hover:border-white/25 text-xs text-[#c8c5cb] tracking-wide font-mono cursor-pointer transition-all group"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#201f20]/60 border border-white/10 hover:border-white/25 text-xs text-[#c8c5cb] tracking-wide font-mono cursor-pointer transition-all group max-w-full overflow-hidden"
               title="Click to copy email"
             >
-              <span className="text-[#c8c5cb]/50">//</span>
-              <span className="text-white group-hover:text-[#c8c5cb] transition-colors">{profile.email}</span>
+              <span className="text-[#c8c5cb]/50 shrink-0">//</span>
+              <span className="text-white group-hover:text-[#c8c5cb] transition-colors truncate">{profile.email}</span>
               {copiedEmail ? (
-                <span className="flex items-center gap-1 text-[10px] text-emerald-400 font-sans font-bold">
+                <span className="flex items-center gap-1 text-[10px] text-emerald-400 font-sans font-bold shrink-0">
                   <Check className="w-3 h-3" /> Copied!
                 </span>
               ) : (
-                <Copy className="w-3 h-3 text-[#c8c5cb]/50 group-hover:text-white transition-colors" />
+                <Copy className="w-3 h-3 text-[#c8c5cb]/50 group-hover:text-white transition-colors shrink-0" />
               )}
             </motion.div>
           </motion.div>

@@ -18,7 +18,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onSelectSkillPill })
   };
 
   return (
-    <section id="about" className="relative py-24 md:py-32 max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
+    <section id="about" className="relative py-20 sm:py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 w-full max-w-full overflow-hidden">
       {/* Background Subtle Accent */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#c8c5cb]/5 rounded-full blur-[140px] pointer-events-none" />
 

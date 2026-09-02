@@ -27,7 +27,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         );
 
   return (
-    <section id="projects" className="py-24 md:py-32 max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 relative">
+    <section id="projects" className="py-20 sm:py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative w-full max-w-full overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#c8c5cb]/5 rounded-full blur-[150px] pointer-events-none" />
 
@@ -42,7 +42,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           <span className="font-semibold text-xs tracking-[0.2em] text-[#c8c5cb]/80 uppercase block mb-2">
             Selected Work
           </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#e5e2e1]">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#e5e2e1] break-words">
             <KineticHeadline
               text="Engineering Intelligence"
               highlightWords={['Intelligence']}

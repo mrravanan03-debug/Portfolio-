@@ -63,7 +63,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 relative">
+    <section id="contact" className="py-20 sm:py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative w-full max-w-full overflow-hidden">
       {/* Background Glow */}
       <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-[#c8c5cb]/5 rounded-full blur-[120px] pointer-events-none transform-gpu" />
 
@@ -78,7 +78,7 @@ export const ContactSection: React.FC = () => {
         <span className="font-semibold text-xs tracking-[0.2em] text-[#c8c5cb]/80 uppercase block mb-2 font-mono">
           Initiate Sequence // Direct Message
         </span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#e5e2e1] uppercase">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#e5e2e1] uppercase break-words">
           <KineticHeadline
             text="Let's Build Something Intelligent"
             highlightWords={['Intelligent']}

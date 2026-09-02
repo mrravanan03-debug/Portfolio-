@@ -203,7 +203,7 @@ export const TerminalSection: React.FC = () => {
   const quickCommands = ['help', 'whoami', 'skills', 'projects', 'exp', 'certs', 'matrix', 'clear'];
 
   return (
-    <section id="terminal" className="py-24 md:py-32 max-w-5xl mx-auto px-6 sm:px-8 relative">
+    <section id="terminal" className="py-20 sm:py-24 md:py-32 max-w-5xl mx-auto px-4 sm:px-8 relative w-full max-w-full overflow-hidden">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -215,7 +215,7 @@ export const TerminalSection: React.FC = () => {
         <span className="font-semibold text-xs tracking-[0.2em] text-[#c8c5cb]/80 uppercase block mb-2">
           Terminal
         </span>
-        <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#e5e2e1]">
+        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#e5e2e1] break-words">
           <KineticHeadline
             text="Interactive Shell"
             highlightWords={['Shell']}
@@ -235,7 +235,7 @@ export const TerminalSection: React.FC = () => {
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         onClick={() => inputRef.current?.focus()}
-        className="rounded-2xl overflow-hidden border border-white/15 bg-[#141313]/95 shadow-[0_25px_60px_rgba(0,0,0,0.85)] font-mono text-sm backdrop-blur-2xl cursor-text"
+        className="rounded-2xl overflow-hidden border border-white/15 bg-[#141313]/95 shadow-[0_25px_60px_rgba(0,0,0,0.85)] font-mono text-sm backdrop-blur-2xl cursor-text w-full max-w-full"
       >
         {/* Terminal Header Bar */}
         <div className="bg-[#201f20]/90 px-4 py-3 border-b border-white/10 flex items-center justify-between select-none">
@@ -266,9 +266,9 @@ export const TerminalSection: React.FC = () => {
         </div>
 
         {/* Terminal Logs Viewport */}
-        <div className="p-6 sm:p-8 min-h-[320px] max-h-[460px] overflow-y-auto space-y-3 font-mono text-xs sm:text-sm">
+        <div className="p-4 sm:p-6 md:p-8 min-h-[300px] max-h-[460px] overflow-y-auto space-y-3 font-mono text-xs sm:text-sm break-words">
           {isMatrixRunning ? (
-            <div className="space-y-1 text-emerald-400 animate-pulse font-mono">
+            <div className="space-y-1 text-emerald-400 animate-pulse font-mono text-[11px] sm:text-xs break-all">
               <p>01001001 01001110 01010100 01000101 01001100 01001100 01001001 01000111 01000101 01001110 01000011 01000101</p>
               <p>OPTIMIZING WEIGHT MATRICES... 99.4% CONVERGED</p>
               <p>STREAMING NEURAL VECTORS: [RAMANAN_CORE_V2.0]</p>
@@ -279,27 +279,27 @@ export const TerminalSection: React.FC = () => {
             lines.map((line) => {
               if (line.type === 'user') {
                 return (
-                  <div key={line.id} className="text-white font-semibold flex items-start gap-1">
+                  <div key={line.id} className="text-white font-semibold flex items-start gap-1 break-words">
                     <span className="text-[#c8c5cb]">{line.text}</span>
                   </div>
                 );
               }
               if (line.type === 'system') {
                 return (
-                  <div key={line.id} className="text-[#c8c5cb]/60 font-mono">
+                  <div key={line.id} className="text-[#c8c5cb]/60 font-mono break-words">
                     {line.text}
                   </div>
                 );
               }
               if (line.type === 'error') {
                 return (
-                  <div key={line.id} className="text-red-400 whitespace-pre-wrap">
+                  <div key={line.id} className="text-red-400 whitespace-pre-wrap break-words">
                     {line.text}
                   </div>
                 );
               }
               return (
-                <div key={line.id} className="text-[#e5e2e1]/90 whitespace-pre-wrap leading-relaxed">
+                <div key={line.id} className="text-[#e5e2e1]/90 whitespace-pre-wrap leading-relaxed break-words">
                   {line.text}
                 </div>
               );
@@ -308,15 +308,15 @@ export const TerminalSection: React.FC = () => {
 
           {/* Interactive Prompt */}
           {!isMatrixRunning && (
-            <div className="flex items-center gap-2 pt-2 text-[#c8c5cb]">
-              <span className="text-emerald-400 font-bold select-none">guest@pramanan:~$</span>
+            <div className="flex items-center gap-2 pt-2 text-[#c8c5cb] flex-wrap">
+              <span className="text-emerald-400 font-bold select-none text-xs sm:text-sm shrink-0">guest@pramanan:~$</span>
               <input
                 ref={inputRef}
                 type="text"
                 value={inputVal}
                 onChange={(e) => setInputVal(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="flex-1 bg-transparent text-white focus:outline-hidden font-mono text-xs sm:text-sm"
+                className="flex-1 min-w-[120px] bg-transparent text-white focus:outline-hidden font-mono text-xs sm:text-sm"
                 placeholder="type command..."
                 autoComplete="off"
                 spellCheck={false}
@@ -329,8 +329,8 @@ export const TerminalSection: React.FC = () => {
         </div>
 
         {/* Quick Command Chips Toolbar */}
-        <div className="bg-[#1a191a] px-4 py-2.5 border-t border-white/10 flex items-center justify-between overflow-x-auto gap-2">
-          <span className="text-[10px] font-mono uppercase text-[#c8c5cb]/50 whitespace-nowrap">
+        <div className="bg-[#1a191a] px-3 sm:px-4 py-2.5 border-t border-white/10 flex items-center justify-between overflow-x-auto gap-2 w-full">
+          <span className="text-[10px] font-mono uppercase text-[#c8c5cb]/50 whitespace-nowrap shrink-0">
             Quick Exec:
           </span>
           <div className="flex items-center gap-1.5 overflow-x-auto py-1">
@@ -341,7 +341,7 @@ export const TerminalSection: React.FC = () => {
                   e.stopPropagation();
                   handleCommand(qCmd);
                 }}
-                className="px-2.5 py-1 rounded bg-[#252425] hover:bg-[#c8c5cb] hover:text-[#141313] text-[#c8c5cb] text-[11px] font-mono transition-colors border border-white/5 cursor-pointer whitespace-nowrap"
+                className="px-2.5 py-1 rounded bg-[#252425] hover:bg-[#c8c5cb] hover:text-[#141313] text-[#c8c5cb] text-[11px] font-mono transition-colors border border-white/5 cursor-pointer whitespace-nowrap shrink-0"
               >
                 {qCmd}
               </button>

@@ -36,7 +36,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ onSelectSkill }) =
   const regularSkills = skills.filter((s) => !s.isLarge);
 
   return (
-    <section id="skills" className="py-24 md:py-32 max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 relative">
+    <section id="skills" className="py-20 sm:py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative w-full max-w-full overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/3 right-10 w-96 h-96 bg-[#c8c5cb]/5 rounded-full blur-[140px] pointer-events-none" />
 
@@ -51,7 +51,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ onSelectSkill }) =
         <span className="font-semibold text-xs tracking-[0.2em] text-[#c8c5cb]/80 uppercase block mb-2">
           Knowledge Base
         </span>
-        <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#e5e2e1]">
+        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#e5e2e1] break-words">
           <KineticHeadline
             text="AI Knowledge Constellation"
             highlightWords={['Constellation']}
@@ -76,7 +76,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ onSelectSkill }) =
           onClick={() => onSelectSkill(largeSkill)}
           onMouseEnter={() => setHoveredSkillId(largeSkill.id)}
           onMouseLeave={() => setHoveredSkillId(null)}
-          className="md:col-span-8 group relative rounded-2xl overflow-hidden glass-card p-8 sm:p-10 flex flex-col justify-between min-h-[360px] cursor-pointer border border-white/10 hover:border-white/25 transition-colors"
+          className="md:col-span-8 group relative rounded-2xl overflow-hidden glass-card p-5 sm:p-8 md:p-10 flex flex-col justify-between min-h-[320px] sm:min-h-[360px] cursor-pointer border border-white/10 hover:border-white/25 transition-colors"
         >
           {/* Constellation Background Image Overlay */}
           {largeSkill.bgImage && (

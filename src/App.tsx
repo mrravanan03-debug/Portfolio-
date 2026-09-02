@@ -40,17 +40,40 @@ export default function App() {
     restDelta: 0.001,
   });
 
+  // Ensure page always starts at top / main page on load and prevent browser restoring scroll to project
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // Scroll to top immediately on mount
+    window.scrollTo(0, 0);
+    setActiveSection('home');
+
+    // If URL has #projects or other stale hash on initial arrival, clear it so it stays at the main page
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
+      // Near top of page, always lock active section to 'home'
+      if (window.scrollY < 120) {
+        setActiveSection('home');
+        return;
+      }
+
       const sections = ['home', 'about', 'skills', 'projects', 'terminal', 'experience', 'certifications', 'contact'];
-      const scrollPos = window.scrollY + 200;
+      const scrollPos = window.scrollY + 220;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el) {
           const top = el.offsetTop;
           if (scrollPos >= top) {
-            setActiveSection(sections[i] === 'certifications' || sections[i] === 'terminal' ? 'projects' : sections[i]);
+            const current = sections[i];
+            setActiveSection(current === 'terminal' ? 'projects' : current);
             break;
           }
         }
@@ -62,9 +85,14 @@ export default function App() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('home');
+      return;
+    }
     const el = document.getElementById(sectionId);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -89,7 +117,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#141313] text-[#e5e2e1] flex flex-col relative font-sans selection:bg-[#c8c5cb]/30 selection:text-white">
+    <div className="min-h-[100dvh] w-full max-w-full overflow-x-hidden bg-[#141313] text-[#e5e2e1] flex flex-col relative font-sans selection:bg-[#c8c5cb]/30 selection:text-white">
       {/* Top Scroll Indicator */}
       <motion.div
         style={{ scaleX }}

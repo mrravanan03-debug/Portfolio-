@@ -9,7 +9,7 @@ export const ExperienceSection: React.FC = () => {
   const { experiences } = PORTFOLIO_DATA;
 
   return (
-    <section id="experience" className="py-24 md:py-32 max-w-6xl mx-auto px-6 sm:px-8 relative">
+    <section id="experience" className="py-20 sm:py-24 md:py-32 max-w-6xl mx-auto px-4 sm:px-8 relative w-full max-w-full overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#c8c5cb]/5 rounded-full blur-[100px] pointer-events-none transform-gpu" />
 
@@ -24,7 +24,7 @@ export const ExperienceSection: React.FC = () => {
         <span className="font-semibold text-xs tracking-[0.2em] text-[#c8c5cb]/80 uppercase block mb-2 font-mono">
           Work History // Industry Internships
         </span>
-        <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#e5e2e1]">
+        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#e5e2e1] break-words">
           <KineticHeadline
             text="Industry Engineering Journey"
             highlightWords={['Journey', 'Engineering']}

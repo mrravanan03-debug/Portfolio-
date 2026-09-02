@@ -19,7 +19,7 @@ export const CertDetailModal: React.FC<CertDetailModalProps> = ({ cert, isOpen, 
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md overflow-y-auto"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md overflow-y-auto w-full max-w-full"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.94, y: 20 }}
@@ -27,7 +27,7 @@ export const CertDetailModal: React.FC<CertDetailModalProps> = ({ cert, isOpen, 
         exit={{ opacity: 0, scale: 0.94, y: 20 }}
         transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-lg bg-[#141313] border border-white/20 rounded-2xl shadow-[0_25px_70px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col my-auto"
+        className="relative w-full max-w-lg max-h-[96dvh] bg-[#141313] border border-white/20 rounded-2xl shadow-[0_25px_70px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col my-auto"
       >
         <div className="p-5 bg-[#201f20] border-b border-white/10 flex items-center justify-between">
           <div className="flex items-center gap-2">

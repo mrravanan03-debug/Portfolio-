@@ -29,9 +29,21 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate, onOpe
         setIsScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const handleLinkClick = (id: string) => {
     onNavigate(id);
@@ -40,21 +52,21 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate, onOpe
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-4 pb-2 pointer-events-none transition-all duration-300">
+      <header className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 pt-3 sm:pt-4 pb-2 pointer-events-none transition-all duration-300 w-full max-w-full">
         <motion.nav
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className={`pointer-events-auto mx-auto w-full max-w-5xl rounded-full px-5 sm:px-6 py-2.5 sm:py-3 transition-all duration-500 flex items-center justify-between border ${
+          className={`pointer-events-auto mx-auto w-full max-w-5xl rounded-full px-4 sm:px-6 py-2 sm:py-3 transition-all duration-500 flex items-center justify-between border ${
             isScrolled
-              ? 'bg-[#201f20]/80 backdrop-blur-2xl border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.6)]'
-              : 'bg-[#201f20]/40 backdrop-blur-xl border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.3)]'
+              ? 'bg-[#201f20]/90 backdrop-blur-2xl border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.6)]'
+              : 'bg-[#201f20]/50 backdrop-blur-xl border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.3)]'
           }`}
         >
           {/* Brand Logo */}
           <button
             onClick={() => handleLinkClick('home')}
-            className="font-bold text-lg sm:text-xl tracking-tight text-[#e5e2e1] hover:text-white transition-all flex items-center gap-1.5 group cursor-pointer"
+            className="font-bold text-base sm:text-xl tracking-tight text-[#e5e2e1] hover:text-white transition-all flex items-center gap-1.5 group cursor-pointer"
           >
             <span className="w-2 h-2 rounded-full bg-[#c8c5cb] group-hover:scale-125 transition-transform shadow-[0_0_8px_#c8c5cb]" />
             <span>P. Ramanan</span>
@@ -117,8 +129,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate, onOpe
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 md:hidden bg-[#141313]/95 backdrop-blur-2xl pt-24 px-6 pb-12 flex flex-col justify-between"
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-40 md:hidden bg-[#141313]/98 backdrop-blur-2xl pt-20 px-5 pb-8 flex flex-col justify-between overflow-y-auto max-h-[100dvh] w-full"
           >
             <div className="space-y-6">
               <div className="text-xs font-semibold uppercase tracking-widest text-[#c8c5cb]/40 mb-4">
