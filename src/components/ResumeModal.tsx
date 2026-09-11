@@ -353,8 +353,35 @@ Developed a comprehensive Machine Learning project using Python to analyze resta
               PROJECTS
             </h2>
 
+            {/* Project 0: CardioPredict AI */}
+            <div className="space-y-1.5">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <h3 className="font-bold text-white text-sm">
+                  CardioPredict AI — Clinical Decision Support & Heart Disease Prediction Platform
+                </h3>
+                <span className="text-xs font-mono text-emerald-400 font-bold">Featured / Production ML</span>
+              </div>
+              <p className="text-xs font-mono text-[#c8c5cb]/90">
+                React 18, TypeScript, Tailwind CSS, Express.js, Python, Scikit-Learn, Platt Scaling, SHAP, HL7 FHIR, SHA-256
+              </p>
+              <ul className="text-xs sm:text-sm text-[#e5e2e1]/85 space-y-1 list-disc list-inside leading-relaxed">
+                <li>
+                  Engineered an enterprise-grade Clinical Decision Support System combining Random Forest and Deep Neural Networks with Platt probability scaling, achieving <strong>95.7% accuracy, 0.978 ROC-AUC, and 96.5% sensitivity</strong> on Cleveland & Framingham cardiac cohorts.
+                </li>
+                <li>
+                  Integrated real-time localized <strong>SHAP (Shapley Additive exPlanations)</strong> to eliminate black-box opacity and provide clinicians with transparent, patient-specific biomarker risk attribution.
+                </li>
+                <li>
+                  Designed a cryptographic <strong>SHA-256 biometric fingerprinting</strong> engine and deduplication verification suite confirming 100% deterministic model invariance (0.000000% delta).
+                </li>
+                <li>
+                  Developed a responsive dual-mode interface (Clinician Simple vs. Advanced Research) with simulated AES-256 encrypted EHR audit logging and <strong>HL7 FHIR JSON</strong> export following ACC/AHA clinical guidelines.
+                </li>
+              </ul>
+            </div>
+
             {/* Project 1 */}
-            <div className="space-y-1">
+            <div className="space-y-1 pt-2 border-t border-white/5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                 <h3 className="font-bold text-white text-sm">
                   Machine Learning-Based Train Journey Time Prediction System

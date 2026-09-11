@@ -17,7 +17,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   const { projects } = PORTFOLIO_DATA;
   const [selectedTag, setSelectedTag] = useState<string>('ALL');
 
-  const allTags = ['ALL', 'ML', 'Python', 'Analytics', 'NLP', 'Cybersecurity', 'FinTech', 'React'];
+  const allTags = ['ALL', 'Healthcare AI', 'ML', 'Python', 'Analytics', 'Cybersecurity', 'React'];
 
   const filteredProjects =
     selectedTag === 'ALL'

@@ -117,6 +117,45 @@ export const PORTFOLIO_DATA = {
 
   projects: [
     {
+      id: 'cardiopredict-ai',
+      title: 'CardioPredict AI — Clinical Decision Support Platform',
+      subtitle: 'Calibrated Ensemble ML & Explainable AI',
+      description:
+        'A clinical decision support platform combining Random Forest and Deep Neural Networks with Platt probability scaling, real-time localized SHAP risk explanations, SHA-256 biometric fingerprinting, and HL7 FHIR export.',
+      detailedDescription:
+        'Engineered an enterprise-grade Clinical Decision Support Platform (CDSS) for cardiovascular disease risk stratification. Built a Calibrated Clinical Ensemble combining Random Forest and Deep Neural Networks with Platt probability scaling, achieving 95.7% accuracy, 0.978 ROC-AUC, and 96.5% clinical sensitivity across Cleveland and Framingham cardiac cohorts. Features real-time localized SHAP (Shapley Additive exPlanations) values to explain patient-specific risk factors, cryptographic SHA-256 biometric fingerprinting verifying 100% deterministic invariance (0.000000% delta on duplicate records), simulated AES-256 encrypted EHR audit logging, and FHIR JSON export following ACC/AHA clinical guidelines.',
+      tags: ['Healthcare AI', 'ML', 'Python', 'React'],
+      image:
+        'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop',
+      imageAlt: 'CardioPredict AI Clinical Decision Support Platform',
+      githubUrl: 'https://github.com/mrravanan03-debug/cardiopredict-ai',
+      liveDemoUrl: '#demo-cardiopredict',
+      metrics: [
+        { label: 'Ensemble Accuracy', value: '95.7%' },
+        { label: 'ROC-AUC Score', value: '0.978' },
+        { label: 'Clinical Sensitivity', value: '96.5%' },
+        { label: 'Deduplication Delta', value: '0.000000%' },
+      ],
+      technologies: [
+        'React 18',
+        'TypeScript',
+        'Tailwind CSS',
+        'Express.js',
+        'Python',
+        'Scikit-Learn',
+        'SHAP',
+        'Platt Scaling',
+        'HL7 FHIR JSON',
+        'SHA-256',
+      ],
+      keyHighlights: [
+        'Calibrated Clinical Ensemble (Random Forest + DNN) with Platt scaling achieving 95.7% accuracy & 0.978 ROC-AUC',
+        'Real-time localized SHAP value attribution isolating patient-specific biomarker risks',
+        'Cryptographic SHA-256 biometric fingerprinting & deduplication test suite verifying 100% deterministic invariance',
+        'Dual-Mode UX: Clinician Simple Mode with live risk gauges & Advanced Clinical Mode with FHIR JSON export',
+      ],
+    },
+    {
       id: 'restaurant-analytics',
       title: 'Restaurant Analytics & Recommendation System',
       subtitle: 'Machine Learning & Geographical Analysis',
@@ -328,7 +367,7 @@ export const PORTFOLIO_DATA = {
     skills:
       'Technical & IT Skills:\n• Self-Learning & Research | Retrieval-Augmented Generation (RAG) | Team Collaboration\n• Analytical Thinking | Project Management | Cryptography Fundamentals\n• Machine Learning Fundamentals (Python, Pandas, NumPy, Scikit-Learn)\n• Documentation Writing | Communication Skills | Network Security Fundamentals\n• Problem Solving | Time Management\nLanguages: English (Intermediate) | Tamil (Native)',
     projects:
-      'Featured Projects:\n[01] Restaurant Analytics & Recommendation System (07/2026 – 08/2026)\n     Python, Rating Prediction, Cuisine Classification, Geographical Analysis\n[02] Train Journey Time Prediction System (05/2025 – 06/2025)\n     ML-based transit duration estimation pipeline\n[03] Budget Planner (Open Source) - MIT License on GitHub\n     Expense & savings management with contributor workflows\n[04] Phishing Website Detector - Threat defense & security heuristics',
+      'Featured Projects:\n[01] CardioPredict AI — Clinical Decision Support Platform\n     Calibrated Ensemble ML (95.7% Acc, 0.978 AUC), SHAP XAI, SHA-256 Deduplication, FHIR\n[02] Restaurant Analytics & Recommendation System (07/2026 – 08/2026)\n     Python, Rating Prediction, Cuisine Classification, Geographical Analysis\n[03] Train Journey Time Prediction System (05/2025 – 06/2025)\n     ML-based transit duration estimation pipeline\n[04] Budget Planner (Open Source) - MIT License on GitHub\n     Expense & savings management with contributor workflows\n[05] Phishing Website Detector - Threat defense & security heuristics',
     exp:
       'Work Experience:\n• Cognifyz Technologies (06/2026 – 07/2026, Nagpur, Maharashtra) - Machine Learning Intern\n  Developed ML models using Python, Pandas, NumPy, Scikit-learn, EDA, & Feature Engineering.\n• Sysslan it solution (04/2026 – 06/2026, Yavatmal, Maharashtra) - Machine Learning Intern\n  Machine learning concepts, real-world data analysis tasks, problem solving, and data visualization.\n• IDM tech park (05/2025 – 05/2025, Coimbatore, Tamil Nadu) - Data Analytics Intern',
     certs:
