@@ -7,9 +7,9 @@ export const PORTFOLIO_DATA = {
     headlineMain: 'BUILDING INTELLIGENCE.',
     headlineSecondary: 'DESIGNING THE FUTURE.',
     summary:
-      'Motivated final-year B.Sc. AI & ML student with skills in data analysis, machine learning fundamentals, and basic web development. Experienced in building ML systems, predictive models, and open-source applications.',
+      'Final-year B.Sc. AI & ML student with expertise in machine learning model development, data preprocessing, and feature engineering. Delivered 5+ production ML models with measurable impact across 4 internships. Proficient in Python, Scikit-learn, TensorFlow, and predictive analytics.',
     aboutBio:
-      'Motivated final-year B.Sc. AI & ML student with skills in data analysis, machine learning fundamentals, and basic web development. Developed an open-source Budget Planner project and completed certifications in AI, cybersecurity, and budgeting. Seeking opportunities to gain industry experience and contribute to real-world projects.',
+      'Final-year B.Sc. AI & ML student with expertise in machine learning model development, data preprocessing, and feature engineering. Delivered 5+ production ML models with measurable impact across 4 internships. Proficient in Python, Scikit-learn, TensorFlow, and predictive analytics.',
     photoUrl:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuB5NQ8tterDlh5_WxSU0_EllflUXy_6BvxMdrDX48frliFRTBX9BNNN4ncjnGsbffBCqBUDAzZGCTHRJURxRtV_G6T4DnFndPkvCSOKpzwM-RdDosOkUQNFx2515kLFqv8GzRz1-cDV1QhI68RtHxepYcu_sb6rg5UxVA8Ggl1l4rY3pfrviXQeZqPxZ7_C_MG0_Uvy7IpWx3sixt3LeylbTgNTNu9zB_PjxV2w5qNzwjv7jcvjwZOv_TH5G3HNLOfTsQ',
     photoAboutUrl:
@@ -20,12 +20,13 @@ export const PORTFOLIO_DATA = {
     github: 'https://github.com/mrravanan03-debug',
     linkedin:
       'https://www.linkedin.com/in/ramanan-p-5810a9375?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    portfolio: 'https://portfolio-ramanan4.vercel.app',
     scholar: 'https://github.com/mrravanan03-debug',
     education: {
       degree: 'Artificial Intelligence and Machine Learning (B.Sc)',
       institution: 'Kovai Kalaimagal College of Arts and Science',
       location: 'Tamil Nadu',
-      cgpa: '6.72',
+      cgpa: '6.73',
       period: '07/2024 – 05/2027',
     },
     languages: [
@@ -263,46 +264,84 @@ export const PORTFOLIO_DATA = {
 
   experiences: [
     {
+      id: 'nitroware',
+      company: 'Nitroware Technologies',
+      period: 'Jul 2026 – Sep 2026',
+      role: 'Machine Learning Intern',
+      location: 'Coimbatore, Tamil Nadu',
+      description:
+        'Developed 3+ supervised ML models (Linear Regression, Random Forest, SVM) achieving 88% accuracy via cross-validation and hyperparameter tuning on real-world datasets. Executed end-to-end data preprocessing on 50K+ records; engineered 8+ features, handled missing values (imputation), removed outliers (IQR), improved accuracy by 6%.',
+      skills: [
+        'Python',
+        'Scikit-Learn',
+        'Random Forest',
+        'SVM',
+        'Linear Regression',
+        'Data Preprocessing',
+        'Feature Engineering',
+        'Hyperparameter Tuning',
+      ],
+    },
+    {
       id: 'cognifyz',
       company: 'Cognifyz Technologies',
-      period: '06/2026 – 07/2026',
+      period: 'Jun 2026 – Jul 2026',
       role: 'Machine Learning Intern',
       location: 'Nagpur, Maharashtra',
       description:
-        'Developed and implemented machine learning models using Python for real-world datasets. Performed data cleaning, preprocessing, feature engineering, and exploratory data analysis (EDA). Worked with Pandas, NumPy, and Scikit-learn for data manipulation and model development.',
-      skills: ['Python', 'Pandas', 'NumPy', 'Scikit-Learn', 'Feature Engineering', 'EDA', 'Model Development'],
+        'Built 4 classification & regression models using Scikit-learn on e-commerce dataset (100K+ transactions); achieved 92% classification accuracy and 3.8 MAE on regression. Performed feature engineering reducing dimensionality by 35% while maintaining performance; applied statistical testing (correlation, chi-square) for feature importance analysis.',
+      skills: [
+        'Python',
+        'Scikit-Learn',
+        'Feature Engineering',
+        'Statistical Testing',
+        'Chi-Square',
+        'Correlation Analysis',
+        'Regression',
+        'EDA',
+      ],
     },
     {
       id: 'sysslan',
-      company: 'Sysslan it solution',
-      period: '04/2026 – 06/2026',
+      company: 'Sysslan IT Solution',
+      period: 'Apr 2026 – Jun 2026',
       role: 'Machine Learning Intern',
       location: 'Yavatmal, Maharashtra',
       description:
-        'Worked on machine learning concepts and real-world data analysis tasks using Python. Gained practical experience in problem-solving, data visualization, and collaborative software development in a professional remote environment.',
-      skills: ['Python', 'Machine Learning', 'Data Analysis', 'Data Visualization', 'Collaborative Dev'],
+        'Developed 5+ predictive models on real-world datasets achieving 85%+ average accuracy; implemented supervised and unsupervised learning algorithms. Generated 30+ data visualizations (Matplotlib, Seaborn, Plotly) for stakeholder insights; collaborated with 3+ developers using Git version control and Agile workflows.',
+      skills: [
+        'Python',
+        'Predictive Modeling',
+        'Supervised Learning',
+        'Unsupervised Learning',
+        'Matplotlib',
+        'Seaborn',
+        'Plotly',
+        'Git',
+        'Agile',
+      ],
     },
     {
       id: 'idm',
-      company: 'IDM tech park',
-      period: '05/2025 – 05/2025',
+      company: 'IDM Tech Park',
+      period: 'May 2025 – Jun 2025',
       role: 'Data Analytics Intern',
       location: 'Coimbatore, Tamil Nadu',
       description:
-        'Participated in data analytics workflows, exploring structured datasets, statistical summaries, and exploratory data evaluation.',
-      skills: ['Data Analytics', 'Exploratory Analysis', 'Data Cleaning', 'Reporting'],
+        'Cleaned and analyzed 4 datasets (10K-50K rows); resolved 200+ data quality issues increasing data integrity by 40%; extracted actionable insights from structured data.',
+      skills: ['Data Analytics', 'Data Cleaning', 'Data Preprocessing', 'Data Quality', 'Structured Data Insights'],
     },
   ] as Experience[],
 
   certifications: [
     {
-      id: 'saylor-crypto',
-      title: 'CS260: Introduction to Cryptography and Network Security',
-      issuer: 'Saylor University',
+      id: 'coursera-clickup',
+      title: 'Introduction to Project Management with ClickUp',
+      issuer: 'Coursera',
       year: 'Jun 2026',
-      icon: 'shield',
-      credentialId: 'SAYLOR-CS260-JUN2026',
-      topics: ['Cryptography Fundamentals', 'Network Security', 'Ciphers & Encryption', 'Authentication Protocols'],
+      icon: 'workflow',
+      credentialId: 'COURSERA-CLICKUP-2026',
+      topics: ['Project Management', 'Agile Workflows', 'Task Management', 'Sprint Planning'],
     },
     {
       id: 'ibm-ai-ambassador',
@@ -341,6 +380,15 @@ export const PORTFOLIO_DATA = {
       topics: ['Data Wrangling', 'Exploratory Data Analysis (EDA)', 'Statistical Analytics', 'Actionable Insights'],
     },
     {
+      id: 'saylor-crypto',
+      title: 'CS260: Introduction to Cryptography and Network Security',
+      issuer: 'Saylor University',
+      year: 'Jun 2026',
+      icon: 'shield',
+      credentialId: 'SAYLOR-CS260-JUN2026',
+      topics: ['Cryptography Fundamentals', 'Network Security', 'Ciphers & Encryption', 'Authentication Protocols'],
+    },
+    {
       id: 'be10x-ai-tools',
       title: 'AI Tools Workshop',
       issuer: 'be10x',
@@ -361,24 +409,23 @@ export const PORTFOLIO_DATA = {
   ] as Certification[],
 
   terminalCommands: {
-    help: 'Available commands:\n  whoami      - Developer profile & credentials\n  skills      - Technical skills, RAG, & IT competencies\n  projects    - Machine learning projects & open-source tools\n  exp         - Industry work experience & internships\n  certs       - Verified certifications & credentials\n  contact     - Transmit coordinates, email & social links\n  github      - Display GitHub repository URL\n  linkedin    - Display LinkedIn profile URL\n  resume      - Formatted resume summary breakdown\n  matrix      - Stream neural matrix sequence\n  clear       - Wipe terminal screen',
+    help: 'Available commands:\n  whoami      - Developer profile & credentials\n  skills      - Technical skills, RAG, & IT competencies\n  projects    - Machine learning projects & open-source tools\n  exp         - Industry work experience & internships (4 internships)\n  certs       - Verified certifications & credentials\n  contact     - Transmit coordinates, email & social links\n  github      - Display GitHub repository URL\n  linkedin    - Display LinkedIn profile URL\n  resume      - Formatted resume summary breakdown\n  matrix      - Stream neural matrix sequence\n  clear       - Wipe terminal screen',
     whoami:
-      'P. Ramanan\nEmail: ramananporchezhiyan@gmail.com | Phone: 8778417527 | Coimbatore, Tamil Nadu\nGitHub: https://github.com/mrravanan03-debug\nLinkedIn: https://www.linkedin.com/in/ramanan-p-5810a9375\nEducation: B.Sc. Artificial Intelligence and Machine Learning (07/2024 – 05/2027), CGPA: 6.72\nInstitution: Kovai Kalaimagal College of Arts and Science, Tamil Nadu\nProfile: Motivated final-year B.Sc. AI & ML student with skills in data analysis, machine learning fundamentals, and basic web development.',
+      'Ramanan\nAI/ML Fresher | Machine Learning | Data Analysis | Python\nEmail: ramananporchezhiyan@gmail.com | Phone: 8778417527 | Coimbatore, Tamil Nadu\nLinkedIn: https://linkedin.com/in/ramanan-p-5810a9375\nGitHub: https://github.com/mrravanan03-debug\nPortfolio: https://portfolio-ramanan4.vercel.app\nEducation: B.Sc. Artificial Intelligence and Machine Learning (07/2024 – 05/2027), CGPA: 6.73/10\nInstitution: Kovai Kalaimagal College of Arts and Science, Tamil Nadu\nProfile: Final-year B.Sc. AI & ML student with expertise in machine learning model development, data preprocessing, and feature engineering. Delivered 5+ production ML models with measurable impact across 4 internships.',
     skills:
-      'Technical & IT Skills:\n• Self-Learning & Research | Retrieval-Augmented Generation (RAG) | Team Collaboration\n• Analytical Thinking | Project Management | Cryptography Fundamentals\n• Machine Learning Fundamentals (Python, Pandas, NumPy, Scikit-Learn)\n• Documentation Writing | Communication Skills | Network Security Fundamentals\n• Problem Solving | Time Management\nLanguages: English (Intermediate) | Tamil (Native)',
+      'Technical & IT Skills Breakdown:\n• Programming: Python (5+ projects), Java, C, C++, R\n• Data Analysis & Visualization: Pandas, NumPy, Matplotlib, Seaborn, Plotly, EDA, Feature Engineering, Data Preprocessing, Statistical Testing\n• Machine Learning: Supervised Learning, Regression, Classification, Unsupervised Learning, Clustering, K-means, Random Forest, Decision Trees, SVM, Neural Networks, Hyperparameter Tuning, Cross-validation, Model Evaluation\n• AI/GenAI: Scikit-learn, TensorFlow (basics), Jupyter Notebook, Google Colab, VS Code\n• Web & DevOps: HTML, CSS, Flask, Git, GitHub, Agile Methodology\n• Security: Cryptography, Network Security, Phishing Detection, Threat Classification\nLanguages: English (Intermediate) | Tamil (Native)',
     projects:
-      'Featured Projects:\n[01] CardioPredict AI — Clinical Decision Support Platform\n     Calibrated Ensemble ML (95.7% Acc, 0.978 AUC), SHAP XAI, SHA-256 Deduplication, FHIR\n[02] Restaurant Analytics & Recommendation System (07/2026 – 08/2026)\n     Python, Rating Prediction, Cuisine Classification, Geographical Analysis\n[03] Train Journey Time Prediction System (05/2025 – 06/2025)\n     ML-based transit duration estimation pipeline\n[04] Budget Planner (Open Source) - MIT License on GitHub\n     Expense & savings management with contributor workflows\n[05] Phishing Website Detector - Threat defense & security heuristics',
+      'Featured Projects:\n[01] Machine Learning-Based Train Journey Time Prediction System\n     92% accuracy on 50K+ records, 3.2h MAE, Flask REST API\n[02] Budget Planner\n     Full-stack expense tracker (15+ features), 100+ users, MIT License, 1000+ monthly txns\n[03] Restaurant Analytics & Recommendation System\n     Ensemble Random Forest (84%) & Neural Networks (91%), 85% precision across 50+ locations\n[04] Phishing Website Detector\n     96% precision, 94% recall on 5K+ URLs, 12+ heuristic security checks, F1-score 0.95\n[05] CardioPredict AI — Clinical Decision Support Platform\n     Ensemble RF & Neural Networks (91% acc, 0.93 AUC), SHAP XAI, HL7 FHIR, SHA-256 for 500+ patients',
     exp:
-      'Work Experience:\n• Cognifyz Technologies (06/2026 – 07/2026, Nagpur, Maharashtra) - Machine Learning Intern\n  Developed ML models using Python, Pandas, NumPy, Scikit-learn, EDA, & Feature Engineering.\n• Sysslan it solution (04/2026 – 06/2026, Yavatmal, Maharashtra) - Machine Learning Intern\n  Machine learning concepts, real-world data analysis tasks, problem solving, and data visualization.\n• IDM tech park (05/2025 – 05/2025, Coimbatore, Tamil Nadu) - Data Analytics Intern',
+      'Work Experience (4 Internships):\n• Nitroware Technologies (Jul 2026 – Sep 2026, Coimbatore, Tamil Nadu) - Machine Learning Intern\n  Developed 3+ supervised ML models (88% acc), data preprocessing on 50K+ records, engineered 8+ features\n• Cognifyz Technologies (Jun 2026 – Jul 2026, Nagpur, Maharashtra) - Machine Learning Intern\n  4 models on 100K+ transactions (92% acc, 3.8 MAE), reduced dimensionality by 35% via feature engineering\n• Sysslan IT Solution (Apr 2026 – Jun 2026, Yavatmal, Maharashtra) - Machine Learning Intern\n  5+ predictive models (85%+ avg acc), generated 30+ visualizations (Matplotlib, Seaborn, Plotly), Git/Agile\n• IDM Tech Park (May 2025 – Jun 2025, Coimbatore, Tamil Nadu) - Data Analytics Intern\n  Cleaned 4 datasets (10K-50K rows), resolved 200+ data quality issues (+40% integrity)',
     certs:
-      'Certifications & Professional Development:\n• CS260: Intro to Cryptography and Network Security - Saylor University (Jun 2026)\n• Artificial Intelligence Fundamentals - IBM SkillsBuild Ambassador (Jun 2026)\n• Fundamentals of ML and AI - AWS (May–Jun 2026)\n• Generative AI Engineering: Foundations, RAG & Deployment - HCL GUVI (May 2026)\n• Data Analysis - Sprout Knowledge Solutions (Feb–Mar 2026)\n• AI Tools Workshop - be10x\n• Building RAG Apps Using MongoDB',
+      'Certifications & Professional Development:\n• Introduction to Project Management with ClickUp – Coursera (Jun 2026)\n• Artificial Intelligence Fundamentals – IBM SkillsBuild Student Ambassador Program (Jun 2026)\n• Fundamentals of Machine Learning and Artificial Intelligence – AWS (May–Jun 2026)\n• Generative AI Engineering: Foundations, RAG & Deployment – HCL GUVI (May 2026)\n• Data Analysis – Sprout Knowledge Solutions Pvt. Ltd. (Feb–Mar 2026)',
     contact:
-      'Contact Coordinates:\n• Email: ramananporchezhiyan@gmail.com\n• Phone: 8778417527\n• Location: Coimbatore, Tamil Nadu\n• GitHub: https://github.com/mrravanan03-debug\n• LinkedIn: https://www.linkedin.com/in/ramanan-p-5810a9375',
+      'Contact Coordinates:\n• Email: ramananporchezhiyan@gmail.com\n• Phone: 8778417527\n• Location: Coimbatore, Tamil Nadu\n• GitHub: https://github.com/mrravanan03-debug\n• LinkedIn: https://linkedin.com/in/ramanan-p-5810a9375\n• Portfolio: https://portfolio-ramanan4.vercel.app',
     github: 'https://github.com/mrravanan03-debug',
-    linkedin:
-      'https://www.linkedin.com/in/ramanan-p-5810a9375?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    linkedin: 'https://linkedin.com/in/ramanan-p-5810a9375',
     resume:
-      '=== P. RAMANAN - RESUME ===\nDegree: B.Sc. Artificial Intelligence and Machine Learning (07/2024 – 05/2027), CGPA: 6.72\nCollege: Kovai Kalaimagal College of Arts and Science, Tamil Nadu\nExperience: ML Intern @ Cognifyz Technologies (06/2026–07/2026), ML Intern @ Sysslan it solution (04/2026–06/2026), IDM tech park (05/2025)\nGitHub: https://github.com/mrravanan03-debug\nLinkedIn: https://www.linkedin.com/in/ramanan-p-5810a9375\nContact: ramananporchezhiyan@gmail.com | 8778417527',
+      '=== RAMANAN - RESUME ===\nRole: AI/ML Fresher | Machine Learning | Data Analysis | Python\nProfile: Final-year B.Sc. AI & ML student with expertise in ML model development, preprocessing, feature engineering across 4 internships.\nEducation: B.Sc. Artificial Intelligence and Machine Learning (07/2024 – 05/2027), CGPA: 6.73/10\nCollege: Kovai Kalaimagal College of Arts and Science, Tamil Nadu\nExperience: Nitroware Technologies (Jul-Sep 2026), Cognifyz Technologies (Jun-Jul 2026), Sysslan IT Solution (Apr-Jun 2026), IDM Tech Park (May-Jun 2025)\nGitHub: https://github.com/mrravanan03-debug | LinkedIn: https://linkedin.com/in/ramanan-p-5810a9375\nContact: ramananporchezhiyan@gmail.com | 8778417527',
   },
 };
 

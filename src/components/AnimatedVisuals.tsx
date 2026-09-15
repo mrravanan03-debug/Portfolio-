@@ -212,6 +212,17 @@ export const AnimatedCompanyCard: React.FC<CompanyShowcaseProps> = ({
 }) => {
   const getCompanyMeta = () => {
     switch (companyId) {
+      case 'nitroware':
+        return {
+          gradient: 'from-[#1e1a14] via-[#151310] to-[#0c0b0a]',
+          border: 'border-amber-500/20 hover:border-amber-400/40',
+          accent: 'text-amber-300',
+          tagBg: 'bg-amber-500/10 border-amber-500/20 text-amber-200',
+          badgeText: 'SUPERVISED ML & PREPROCESSING',
+          domain: 'Supervised ML Models & End-to-End Preprocessing',
+          metric: '88% Model Accuracy on 50K+ Records',
+          icon: <Cpu className="w-5 h-5 text-amber-300" />,
+        };
       case 'cognifyz':
         return {
           gradient: 'from-[#1c1825] via-[#14121a] to-[#0e0c12]',
