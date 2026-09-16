@@ -157,6 +157,43 @@ export const PORTFOLIO_DATA = {
       ],
     },
     {
+      id: 'kkcas-blockchain-verification',
+      title: 'Kovai Kalaimagal College of Arts and Science — Blockchain Certificate Verification System',
+      subtitle: 'Decentralized Academic Credential Verification & Anti-Forgery Ledger',
+      description:
+        'An immutable blockchain verification ledger and anti-forgery credential architecture built for Kovai Kalaimagal College of Arts and Science, utilizing cryptographic SHA-256 hashing, Merkle-tree validation, and instant QR verification.',
+      detailedDescription:
+        'Engineered an institutional Blockchain Certificate Verification System for Kovai Kalaimagal College of Arts and Science (KKCAS). Built a decentralized verification ledger utilizing cryptographic SHA-256 document hashing, elliptic-curve digital signatures (ECDSA), and immutable block chaining to securely record academic transcripts and graduation degrees. Features include institutional authority multi-sig issuance, zero-knowledge tamper detection, instant cryptographic QR code decoding, public zero-trust explorer, and automated employer verification with sub-second verification latency (< 0.8s), eliminating document forgery and manual university registrar verification delays.',
+      tags: ['Blockchain', 'Security', 'Cryptography', 'Python', 'Web3'],
+      image:
+        'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop',
+      imageAlt: 'Kovai Kalaimagal College of Arts and Science Blockchain Certificate Verification System',
+      githubUrl: 'https://github.com/mrravanan03-debug/kkcas-blockchain-certificate-verification',
+      liveDemoUrl: '#demo-blockchain',
+      metrics: [
+        { label: 'Verification Latency', value: '< 0.8s' },
+        { label: 'Forgery Detection', value: '100% Invariant' },
+        { label: 'Ledger Hash', value: 'SHA-256 & Merkle' },
+        { label: 'Authority Node', value: 'KKCAS Autonomous' },
+      ],
+      technologies: [
+        'Python',
+        'Blockchain Architecture',
+        'SHA-256 Cryptography',
+        'ECDSA Signatures',
+        'Merkle Trees',
+        'FastAPI / Flask',
+        'React 18',
+        'Tailwind CSS',
+      ],
+      keyHighlights: [
+        'Architected immutable blockchain verification ledger for Kovai Kalaimagal College of Arts and Science degrees',
+        'Cryptographic SHA-256 block hashing & Merkle tree verification preventing transcript and grade forgery',
+        'Instant employer QR code scanner with zero-trust cryptographic signature validation (< 0.8s latency)',
+        'Authorized registrar issuance console with tamper-evident audit trails and cryptographic proof logs',
+      ],
+    },
+    {
       id: 'restaurant-analytics',
       title: 'Restaurant Analytics & Recommendation System',
       subtitle: 'Machine Learning & Geographical Analysis',
@@ -415,7 +452,7 @@ export const PORTFOLIO_DATA = {
     skills:
       'Technical & IT Skills Breakdown:\n• Programming: Python (5+ projects), Java, C, C++, R\n• Data Analysis & Visualization: Pandas, NumPy, Matplotlib, Seaborn, Plotly, EDA, Feature Engineering, Data Preprocessing, Statistical Testing\n• Machine Learning: Supervised Learning, Regression, Classification, Unsupervised Learning, Clustering, K-means, Random Forest, Decision Trees, SVM, Neural Networks, Hyperparameter Tuning, Cross-validation, Model Evaluation\n• AI/GenAI: Scikit-learn, TensorFlow (basics), Jupyter Notebook, Google Colab, VS Code\n• Web & DevOps: HTML, CSS, Flask, Git, GitHub, Agile Methodology\n• Security: Cryptography, Network Security, Phishing Detection, Threat Classification\nLanguages: English (Intermediate) | Tamil (Native)',
     projects:
-      'Featured Projects:\n[01] Machine Learning-Based Train Journey Time Prediction System\n     92% accuracy on 50K+ records, 3.2h MAE, Flask REST API\n[02] Budget Planner\n     Full-stack expense tracker (15+ features), 100+ users, MIT License, 1000+ monthly txns\n[03] Restaurant Analytics & Recommendation System\n     Ensemble Random Forest (84%) & Neural Networks (91%), 85% precision across 50+ locations\n[04] Phishing Website Detector\n     96% precision, 94% recall on 5K+ URLs, 12+ heuristic security checks, F1-score 0.95\n[05] CardioPredict AI — Clinical Decision Support Platform\n     Ensemble RF & Neural Networks (91% acc, 0.93 AUC), SHAP XAI, HL7 FHIR, SHA-256 for 500+ patients',
+      'Featured Projects:\n[01] Kovai Kalaimagal College of Arts and Science — Blockchain Certificate Verification System\n     Decentralized academic credential ledger, SHA-256 Merkle proofs, ECDSA digital signatures, <0.8s verification\n[02] Machine Learning-Based Train Journey Time Prediction System\n     92% accuracy on 50K+ records, 3.2h MAE, Flask REST API\n[03] Budget Planner\n     Full-stack expense tracker (15+ features), 100+ users, MIT License, 1000+ monthly txns\n[04] Restaurant Analytics & Recommendation System\n     Ensemble Random Forest (84%) & Neural Networks (91%), 85% precision across 50+ locations\n[05] Phishing Website Detector\n     96% precision, 94% recall on 5K+ URLs, 12+ heuristic security checks, F1-score 0.95\n[06] CardioPredict AI — Clinical Decision Support Platform\n     Ensemble RF & Neural Networks (91% acc, 0.93 AUC), SHAP XAI, HL7 FHIR, SHA-256 for 500+ patients',
     exp:
       'Work Experience (4 Internships):\n• Nitroware Technologies (Jul 2026 – Sep 2026, Coimbatore, Tamil Nadu) - Machine Learning Intern\n  Developed 3+ supervised ML models (88% acc), data preprocessing on 50K+ records, engineered 8+ features\n• Cognifyz Technologies (Jun 2026 – Jul 2026, Nagpur, Maharashtra) - Machine Learning Intern\n  4 models on 100K+ transactions (92% acc, 3.8 MAE), reduced dimensionality by 35% via feature engineering\n• Sysslan IT Solution (Apr 2026 – Jun 2026, Yavatmal, Maharashtra) - Machine Learning Intern\n  5+ predictive models (85%+ avg acc), generated 30+ visualizations (Matplotlib, Seaborn, Plotly), Git/Agile\n• IDM Tech Park (May 2025 – Jun 2025, Coimbatore, Tamil Nadu) - Data Analytics Intern\n  Cleaned 4 datasets (10K-50K rows), resolved 200+ data quality issues (+40% integrity)',
     certs:

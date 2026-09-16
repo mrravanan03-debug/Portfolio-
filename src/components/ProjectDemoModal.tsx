@@ -30,6 +30,13 @@ import {
   Fingerprint,
   Database,
   Stethoscope,
+  QrCode,
+  Award,
+  Layers,
+  Key,
+  CheckCircle,
+  GraduationCap,
+  Link2,
 } from 'lucide-react';
 
 interface ProjectDemoModalProps {
@@ -308,6 +315,86 @@ export const ProjectDemoModal: React.FC<ProjectDemoModalProps> = ({ project, isO
 
   const netSavings = income - expenses;
   const savingsRate = Math.round((netSavings / (income || 1)) * 100);
+
+  // State for KKCAS Blockchain Certificate Verification System
+  type KKCASPresetKey = 'ramanan' | 'priya' | 'vignesh';
+  const KKCAS_PRESETS: Record<
+    KKCASPresetKey,
+    {
+      name: string;
+      rollNo: string;
+      degree: string;
+      department: string;
+      year: string;
+      cgpa: string;
+      issueDate: string;
+      blockIndex: number;
+      txHash: string;
+      merkleRoot: string;
+      sealId: string;
+    }
+  > = {
+    ramanan: {
+      name: 'Ramanan P',
+      rollNo: 'KKCAS-2024-AIML-0842',
+      degree: 'Bachelor of Science (B.Sc)',
+      department: 'Artificial Intelligence and Machine Learning',
+      year: '2024 – 2027',
+      cgpa: '6.73 / 10.0',
+      issueDate: 'May 15, 2027',
+      blockIndex: 428,
+      txHash: '0x3a9f82c1b9d4e7f0a2c5b8e1d4f7a0c3e6b9d2f5a8c1e4b7d0f3a6c9e2b5d8f1',
+      merkleRoot: '0x7e8f1a4b9c0d3e5f2a1b4c6d8e0f9a2b4c6d8e0f1a3b5c7d9e1f3a5b7c9d1e3f',
+      sealId: 'KKCAS-AUTONOMOUS-SEAL-2027-0842',
+    },
+    priya: {
+      name: 'Priya S',
+      rollNo: 'KKCAS-2023-CS-0319',
+      degree: 'Bachelor of Science (B.Sc)',
+      department: 'Computer Science',
+      year: '2023 – 2026',
+      cgpa: '8.45 / 10.0',
+      issueDate: 'May 20, 2026',
+      blockIndex: 395,
+      txHash: '0x5c8e2b9f1a4d7a0c3e6b9d2f5a8c1e4b7d0f3a6c9e2b5d8f1a3b5c7d9e1f3a5b',
+      merkleRoot: '0x9c1a3b5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b',
+      sealId: 'KKCAS-AUTONOMOUS-SEAL-2026-0319',
+    },
+    vignesh: {
+      name: 'Vignesh K',
+      rollNo: 'KKCAS-2022-BCA-0551',
+      degree: 'Bachelor of Computer Applications (BCA)',
+      department: 'Computer Applications',
+      year: '2022 – 2025',
+      cgpa: '7.80 / 10.0',
+      issueDate: 'May 18, 2025',
+      blockIndex: 312,
+      txHash: '0x8f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a',
+      merkleRoot: '0x2d4f6a8b0c2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4a',
+      sealId: 'KKCAS-AUTONOMOUS-SEAL-2025-0551',
+    },
+  };
+
+  const [bcPreset, setBcPreset] = useState<KKCASPresetKey>('ramanan');
+  const [bcTamperActive, setBcTamperActive] = useState<boolean>(false);
+  const [bcTab, setBcTab] = useState<'verify' | 'explorer' | 'architecture'>('verify');
+  const [bcIsVerifying, setBcIsVerifying] = useState<boolean>(false);
+  const [bcCopiedTx, setBcCopiedTx] = useState<boolean>(false);
+
+  const activeBcStudent = KKCAS_PRESETS[bcPreset];
+
+  const handleVerifyBlockchain = () => {
+    setBcIsVerifying(true);
+    setTimeout(() => {
+      setBcIsVerifying(false);
+    }, 650);
+  };
+
+  const copyBcTx = () => {
+    navigator.clipboard.writeText(activeBcStudent.txHash);
+    setBcCopiedTx(true);
+    setTimeout(() => setBcCopiedTx(false), 2000);
+  };
 
   return (
     <motion.div
@@ -816,6 +903,458 @@ export const ProjectDemoModal: React.FC<ProjectDemoModalProps> = ({ project, isO
   "deterministicVarianceDelta": "0.000000%"
 }`}
                       </pre>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* SIMULATOR: KOVAI KALAIMAGAL COLLEGE OF ARTS AND SCIENCE - BLOCKCHAIN CERTIFICATE VERIFICATION */}
+            {project.id === 'kkcas-blockchain-verification' && (
+              <div className="space-y-6">
+                {/* Institutional College Header Banner */}
+                <div className="p-4 rounded-xl bg-gradient-to-r from-[#1b1a1c] via-[#242226] to-[#1b1a1c] border border-amber-500/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0">
+                      <GraduationCap className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <h5 className="text-sm sm:text-base font-bold text-white tracking-tight">
+                          KOVAI KALAIMAGAL COLLEGE OF ARTS AND SCIENCE
+                        </h5>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/25">
+                          AUTONOMOUS
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-[#c8c5cb]/80 font-mono mt-0.5">
+                        Coimbatore, Tamil Nadu &bull; Re-accredited with 'A' Grade by NAAC &bull; Blockchain Credential Node
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 self-stretch md:self-auto justify-end">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      PoA Consortium Node Active
+                    </span>
+                  </div>
+                </div>
+
+                {/* Sub-Navigation Tabs */}
+                <div className="flex flex-wrap items-center gap-2 border-b border-white/10 pb-3">
+                  <button
+                    onClick={() => setBcTab('verify')}
+                    className={`px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold flex items-center gap-2 transition-all cursor-pointer ${
+                      bcTab === 'verify'
+                        ? 'bg-[#c8c5cb] text-[#141313]'
+                        : 'text-[#c8c5cb]/70 hover:text-white bg-white/5'
+                    }`}
+                  >
+                    <ShieldCheck className="w-3.5 h-3.5" />
+                    <span>Certificate Verifier</span>
+                  </button>
+                  <button
+                    onClick={() => setBcTab('explorer')}
+                    className={`px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold flex items-center gap-2 transition-all cursor-pointer ${
+                      bcTab === 'explorer'
+                        ? 'bg-[#c8c5cb] text-[#141313]'
+                        : 'text-[#c8c5cb]/70 hover:text-white bg-white/5'
+                    }`}
+                  >
+                    <Layers className="w-3.5 h-3.5" />
+                    <span>On-Chain Block Explorer</span>
+                  </button>
+                  <button
+                    onClick={() => setBcTab('architecture')}
+                    className={`px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold flex items-center gap-2 transition-all cursor-pointer ${
+                      bcTab === 'architecture'
+                        ? 'bg-[#c8c5cb] text-[#141313]'
+                        : 'text-[#c8c5cb]/70 hover:text-white bg-white/5'
+                    }`}
+                  >
+                    <Key className="w-3.5 h-3.5" />
+                    <span>Cryptographic Architecture</span>
+                  </button>
+                </div>
+
+                {/* TAB 1: VERIFY CERTIFICATE */}
+                {bcTab === 'verify' && (
+                  <div className="space-y-6">
+                    {/* Student Preset Selector & Tamper Switch */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+                      {/* Left: Student selection */}
+                      <div className="lg:col-span-7 space-y-2">
+                        <label className="text-xs font-mono text-[#c8c5cb]/80 block">
+                          Select Student Credential to Verify:
+                        </label>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                          {(['ramanan', 'priya', 'vignesh'] as KKCASPresetKey[]).map((key) => {
+                            const st = KKCAS_PRESETS[key];
+                            return (
+                              <button
+                                key={key}
+                                onClick={() => {
+                                  setBcPreset(key);
+                                  setBcTamperActive(false);
+                                }}
+                                className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+                                  bcPreset === key
+                                    ? 'bg-amber-500/10 border-amber-500/40 text-white shadow-xs'
+                                    : 'bg-[#141313] border-white/10 text-[#c8c5cb]/70 hover:border-white/20'
+                                }`}
+                              >
+                                <div className="font-bold text-xs text-white">{st.name}</div>
+                                <div className="text-[10px] font-mono text-[#c8c5cb]/70 truncate mt-0.5">
+                                  {st.department}
+                                </div>
+                                <div className="text-[10px] font-mono text-emerald-400 mt-1">
+                                  CGPA: {st.cgpa}
+                                </div>
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Right: Tamper Injection Testing */}
+                      <div className="lg:col-span-5 p-3.5 rounded-xl bg-[#141313] border border-white/10 flex flex-col justify-between gap-3">
+                        <div>
+                          <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-white uppercase">
+                            <AlertTriangle className="w-4 h-4 text-amber-400" />
+                            <span>Anti-Forgery Tamper Test</span>
+                          </div>
+                          <p className="text-[11px] text-[#c8c5cb]/70 mt-1 leading-relaxed">
+                            Simulate an unauthorized modification (e.g. changing CGPA to 9.98) to test zero-trust Merkle rejection.
+                          </p>
+                        </div>
+
+                        <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                          <span className="text-xs font-mono text-white">
+                            {bcTamperActive ? '⚠️ Tampering Active' : '🛡️ Authentic Record'}
+                          </span>
+                          <button
+                            onClick={() => {
+                              setBcTamperActive(!bcTamperActive);
+                              handleVerifyBlockchain();
+                            }}
+                            className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-colors cursor-pointer ${
+                              bcTamperActive
+                                ? 'bg-rose-500 text-white shadow-xs shadow-rose-500/30'
+                                : 'bg-white/10 hover:bg-white/20 text-white'
+                            }`}
+                          >
+                            {bcTamperActive ? 'Revert to Original' : 'Inject Tampered Grade'}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Verification Result Card */}
+                    <div
+                      className={`p-4 rounded-xl border transition-all ${
+                        bcTamperActive
+                          ? 'bg-rose-950/30 border-rose-500/40 text-rose-200'
+                          : 'bg-emerald-950/20 border-emerald-500/30 text-emerald-200'
+                      }`}
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div className="flex items-start sm:items-center gap-3">
+                          {bcTamperActive ? (
+                            <ShieldAlert className="w-6 h-6 text-rose-400 shrink-0 mt-0.5 sm:mt-0" />
+                          ) : (
+                            <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
+                          )}
+                          <div>
+                            <div className="font-bold text-sm tracking-tight text-white flex items-center gap-2">
+                              {bcTamperActive ? (
+                                <span className="text-rose-400">CRYPTOGRAPHIC TAMPERING DETECTED &bull; FORGERY REJECTED</span>
+                              ) : (
+                                <span className="text-emerald-400">100% AUTHENTIC &bull; ON-CHAIN PROOF VERIFIED</span>
+                              )}
+                              <span className="text-[10px] font-mono px-2 py-0.2 rounded bg-black/40 text-[#c8c5cb]">
+                                &lt; 0.04s
+                              </span>
+                            </div>
+                            <p className="text-xs text-[#c8c5cb] font-mono mt-0.5">
+                              {bcTamperActive
+                                ? 'Document payload SHA-256 does NOT match Merkle root anchored in Block #' + activeBcStudent.blockIndex
+                                : `Anchored in KKCAS Ledger Block #${activeBcStudent.blockIndex} with valid ECDSA Registrar Signature`}
+                            </p>
+                          </div>
+                        </div>
+
+                        <button
+                          onClick={handleVerifyBlockchain}
+                          disabled={bcIsVerifying}
+                          className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors cursor-pointer self-end sm:self-auto shrink-0"
+                        >
+                          <RefreshCw className={`w-3.5 h-3.5 ${bcIsVerifying ? 'animate-spin' : ''}`} />
+                          <span>{bcIsVerifying ? 'Verifying...' : 'Re-verify Hash'}</span>
+                        </button>
+                      </div>
+
+                      {/* Hash comparison details */}
+                      <div className="mt-3 pt-3 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-3 font-mono text-[11px]">
+                        <div>
+                          <span className="text-[#c8c5cb]/70 block">Computed Document SHA-256 Hash:</span>
+                          <span
+                            className={`break-all font-semibold ${
+                              bcTamperActive ? 'text-rose-400' : 'text-emerald-300'
+                            }`}
+                          >
+                            {bcTamperActive
+                              ? '0xdeadbeef99990000fa15efa15e0000tampered9999grade9999mismatch'
+                              : activeBcStudent.txHash}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-[#c8c5cb]/70 block">Recorded KKCAS Blockchain Merkle Root:</span>
+                          <span className="break-all text-white/90">{activeBcStudent.merkleRoot}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Academic Certificate Visual Render (KKCAS Formal Diploma) */}
+                    <div className="p-6 sm:p-8 rounded-2xl bg-[#171618] border-2 border-amber-500/30 shadow-2xl relative overflow-hidden space-y-6">
+                      {/* Watermark Crest Background */}
+                      <div className="absolute right-4 bottom-4 opacity-5 pointer-events-none">
+                        <GraduationCap className="w-80 h-80 text-amber-400" />
+                      </div>
+
+                      {/* Certificate Top Header */}
+                      <div className="text-center space-y-1 relative z-10">
+                        <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-amber-400 font-bold block">
+                          Autonomous &bull; Affiliated to Bharathiar University &bull; Re-accredited with 'A' Grade
+                        </span>
+                        <h3 className="text-xl sm:text-2xl font-serif font-bold text-white tracking-wide">
+                          KOVAI KALAIMAGAL COLLEGE OF ARTS AND SCIENCE
+                        </h3>
+                        <p className="text-xs text-[#c8c5cb] font-serif italic">
+                          Narasipuram Post, Thondamuthur Via, Coimbatore - 641 109, Tamil Nadu
+                        </p>
+                        <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mt-2" />
+                      </div>
+
+                      {/* Diploma Body Text */}
+                      <div className="space-y-4 text-center max-w-2xl mx-auto py-2 relative z-10">
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#c8c5cb] font-bold">
+                          DEGREE CERTIFICATE
+                        </span>
+                        <p className="text-xs sm:text-sm text-[#e5e2e1] leading-relaxed font-serif">
+                          The Governing Council of Kovai Kalaimagal College of Arts and Science hereby confers upon
+                        </p>
+                        <div className="text-lg sm:text-2xl font-bold text-amber-300 font-serif tracking-wide py-1">
+                          {activeBcStudent.name}
+                        </div>
+                        <p className="text-xs sm:text-sm text-[#e5e2e1] leading-relaxed font-serif">
+                          the degree of <strong className="text-white">{activeBcStudent.degree}</strong> in{' '}
+                          <strong className="text-white">{activeBcStudent.department}</strong>, having fulfilled all
+                          the academic requirements and passed the examinations prescribed therefor.
+                        </p>
+                      </div>
+
+                      {/* Academic Performance & Ledger Parameters */}
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#111011] p-4 rounded-xl border border-white/10 relative z-10 text-center font-mono">
+                        <div>
+                          <span className="text-[10px] text-[#c8c5cb]/70 uppercase block">Roll Number</span>
+                          <span className="text-xs sm:text-sm font-bold text-white">{activeBcStudent.rollNo}</span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-[#c8c5cb]/70 uppercase block">Graduation CGPA</span>
+                          <span
+                            className={`text-xs sm:text-sm font-bold ${
+                              bcTamperActive ? 'text-rose-400 line-through' : 'text-emerald-400'
+                            }`}
+                          >
+                            {bcTamperActive ? '9.98 (Tampered)' : activeBcStudent.cgpa}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-[#c8c5cb]/70 uppercase block">Passing Period</span>
+                          <span className="text-xs sm:text-sm font-bold text-white">{activeBcStudent.year}</span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-[#c8c5cb]/70 uppercase block">Conferred On</span>
+                          <span className="text-xs sm:text-sm font-bold text-white">{activeBcStudent.issueDate}</span>
+                        </div>
+                      </div>
+
+                      {/* Footer: Digital Seal, QR Code, and Authority Signatures */}
+                      <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 border-t border-white/10 relative z-10">
+                        {/* QR Code & Digital Verification Link */}
+                        <div className="flex items-center gap-3">
+                          <div className="w-16 h-16 rounded-lg bg-white p-1.5 flex flex-col items-center justify-center shrink-0 shadow-lg">
+                            <QrCode className="w-full h-full text-black" />
+                          </div>
+                          <div className="space-y-1">
+                            <span className="text-[10px] font-mono text-emerald-400 font-bold block">
+                              CRYPTOGRAPHIC QR VERIFIER
+                            </span>
+                            <span className="text-[11px] font-mono text-[#c8c5cb] block">
+                              Scan with camera to inspect block #{activeBcStudent.blockIndex}
+                            </span>
+                            <button
+                              onClick={copyBcTx}
+                              className="text-[10px] font-mono text-amber-400 hover:text-amber-300 flex items-center gap-1 cursor-pointer"
+                            >
+                              <Copy className="w-3 h-3" />
+                              <span>{bcCopiedTx ? 'Copied Tx Hash!' : 'Copy Transaction Hash'}</span>
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Authority Signature */}
+                        <div className="text-center sm:text-right space-y-1 font-mono">
+                          <div className="text-xs font-bold text-white font-serif italic text-amber-200">
+                            Dr. N. Mala / Registrar
+                          </div>
+                          <span className="text-[10px] text-[#c8c5cb]/70 uppercase block">
+                            Controller of Examinations & Principal
+                          </span>
+                          <span className="text-[10px] text-emerald-400/90 block">
+                            Digital Key ID: KKCAS-REGISTRAR-SEC256K1
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* TAB 2: ON-CHAIN BLOCK EXPLORER */}
+                {bcTab === 'explorer' && (
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h5 className="text-xs font-mono uppercase tracking-wider text-white font-bold">
+                          KKCAS Consortium Chain Ledger
+                        </h5>
+                        <p className="text-[11px] text-[#c8c5cb]/70 font-mono">
+                          Synchronized across institutional nodes, Controller of Examinations, and Bharathiar University Gateway
+                        </p>
+                      </div>
+                      <span className="text-[11px] font-mono text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded border border-emerald-400/20">
+                        Current Height: #428
+                      </span>
+                    </div>
+
+                    <div className="space-y-3 font-mono text-xs">
+                      {/* Block #428 */}
+                      <div className="p-4 rounded-xl bg-[#141313] border border-amber-500/30 space-y-2">
+                        <div className="flex items-center justify-between text-xs">
+                          <div className="flex items-center gap-2">
+                            <span className="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">
+                              Block #428
+                            </span>
+                            <span className="text-white font-bold">Ramanan P &bull; B.Sc AI & ML Degree</span>
+                          </div>
+                          <span className="text-[11px] text-emerald-400">12 Confirmations</span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-[#c8c5cb]/80 pt-1">
+                          <div>
+                            <span className="text-[#c8c5cb]/50">Block Hash:</span>{' '}
+                            <span className="text-white break-all">0x3a9f82c1b9d4e7f0a2c5b8e1d4f7a0c3e6b9d2f5a8c1e4b7...</span>
+                          </div>
+                          <div>
+                            <span className="text-[#c8c5cb]/50">Prev Hash:</span>{' '}
+                            <span className="text-white/70 break-all">0x5c8e2b9f1a4d7a0c3e6b9d2f5a8c1e4b7d0f3a6c9e2b5d8f...</span>
+                          </div>
+                          <div>
+                            <span className="text-[#c8c5cb]/50">Merkle Root:</span>{' '}
+                            <span className="text-amber-300 break-all">0x7e8f1a4b9c0d3e5f2a1b4c6d8e0f9a2b4c6d8e0f1a3b5c7d...</span>
+                          </div>
+                          <div>
+                            <span className="text-[#c8c5cb]/50">Validator Node:</span>{' '}
+                            <span className="text-white">KKCAS-Autonomous-Node-1</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Block #395 */}
+                      <div className="p-4 rounded-xl bg-[#141313] border border-white/10 space-y-2">
+                        <div className="flex items-center justify-between text-xs">
+                          <div className="flex items-center gap-2">
+                            <span className="px-2 py-0.5 rounded bg-white/10 text-white font-bold">
+                              Block #395
+                            </span>
+                            <span className="text-white font-bold">Priya S &bull; B.Sc Computer Science</span>
+                          </div>
+                          <span className="text-[11px] text-[#c8c5cb]/70">Verified 2026</span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-[#c8c5cb]/80 pt-1">
+                          <div>
+                            <span className="text-[#c8c5cb]/50">Block Hash:</span>{' '}
+                            <span className="text-white break-all">0x5c8e2b9f1a4d7a0c3e6b9d2f5a8c1e4b7d0f3a6c9e2b5d8f...</span>
+                          </div>
+                          <div>
+                            <span className="text-[#c8c5cb]/50">Merkle Root:</span>{' '}
+                            <span className="text-white/70 break-all">0x9c1a3b5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f...</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Block #0 (Genesis) */}
+                      <div className="p-4 rounded-xl bg-[#141313] border border-white/10 space-y-2">
+                        <div className="flex items-center justify-between text-xs">
+                          <div className="flex items-center gap-2">
+                            <span className="px-2 py-0.5 rounded bg-white/10 text-white font-bold">
+                              Block #0
+                            </span>
+                            <span className="text-white font-bold">KKCAS Genesis Academic Ledger</span>
+                          </div>
+                          <span className="text-[11px] text-amber-400">Charter Node Init</span>
+                        </div>
+                        <div className="text-[11px] text-[#c8c5cb]/70">
+                          Initial root anchor deployed under Kovai Kalaimagal College of Arts and Science Examination Cell.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* TAB 3: CRYPTOGRAPHIC ARCHITECTURE */}
+                {bcTab === 'architecture' && (
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+                      <div className="p-4 rounded-xl bg-[#141313] border border-white/10 space-y-2">
+                        <div className="flex items-center gap-2 text-emerald-400 font-bold">
+                          <Fingerprint className="w-4 h-4" />
+                          <span>1. SHA-256 Canonical Hashing</span>
+                        </div>
+                        <p className="text-[#c8c5cb]/80 leading-relaxed font-sans text-xs">
+                          Candidate academic credentials (Name, Roll No, CGPA, Credits, Passing Date) are normalized into canonical JSON strings and hashed via SHA-256. A 1-bit alteration in grade completely alters the resulting 256-bit digest.
+                        </p>
+                      </div>
+
+                      <div className="p-4 rounded-xl bg-[#141313] border border-white/10 space-y-2">
+                        <div className="flex items-center gap-2 text-blue-400 font-bold">
+                          <Layers className="w-4 h-4" />
+                          <span>2. Merkle Tree Batching</span>
+                        </div>
+                        <p className="text-[#c8c5cb]/80 leading-relaxed font-sans text-xs">
+                          Transcripts are batched into a cryptographic Merkle tree per examination session. Verifiers can validate individual credentials using an O(log N) Merkle path proof without revealing other students' private records.
+                        </p>
+                      </div>
+
+                      <div className="p-4 rounded-xl bg-[#141313] border border-white/10 space-y-2">
+                        <div className="flex items-center gap-2 text-purple-400 font-bold">
+                          <Key className="w-4 h-4" />
+                          <span>3. Institutional ECDSA Signing</span>
+                        </div>
+                        <p className="text-[#c8c5cb]/80 leading-relaxed font-sans text-xs">
+                          The Controller of Examinations signs the Merkle root using an offline hardware security module (HSM) with secp256k1 elliptic curve cryptography, guaranteeing provenance from Kovai Kalaimagal College of Arts and Science.
+                        </p>
+                      </div>
+
+                      <div className="p-4 rounded-xl bg-[#141313] border border-white/10 space-y-2">
+                        <div className="flex items-center gap-2 text-amber-400 font-bold">
+                          <QrCode className="w-4 h-4" />
+                          <span>4. Instant Zero-Trust QR Verification</span>
+                        </div>
+                        <p className="text-[#c8c5cb]/80 leading-relaxed font-sans text-xs">
+                          Printed and digital degrees embed an optical QR code carrying the on-chain pointer and cryptographic proof. Employers verify credentials in under 0.8 seconds without registrar phone calls or postal transcript delays.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 )}

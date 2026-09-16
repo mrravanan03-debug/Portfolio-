@@ -100,6 +100,10 @@ PROJECTS
 5. CardioPredict AI — Clinical Decision Support Platform
    Machine Learning | Healthcare AI | Clinical Decision Support
    • Clinical decision support combining Random Forest & Neural Networks (91% accuracy, AUC-ROC 0.93); SHAP-based explainability; HL7 FHIR integration; SHA-256 encryption for 500+ patients
+
+6. Kovai Kalaimagal College of Arts and Science — Blockchain Certificate Verification System
+   Blockchain | Cryptography | Python | Security
+   • Engineered institutional decentralized credential verification ledger with SHA-256 block hashing, Merkle proofs, and ECDSA signatures; prevents transcript and grade tampering, enabling instant (<0.8s) employer QR code verification
 `;
 
     const element = document.createElement('a');
@@ -485,6 +489,30 @@ PROJECTS
                 </li>
                 <li>
                   Developed a responsive dual-mode interface (Clinician Simple vs. Advanced Research) with simulated AES-256 encrypted EHR audit logging and <strong>HL7 FHIR JSON</strong> export following ACC/AHA clinical guidelines.
+                </li>
+              </ul>
+            </div>
+
+            {/* Project 6: KKCAS Blockchain Certificate Verification System */}
+            <div className="space-y-1.5 pt-2 border-t border-white/5">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <h3 className="font-bold text-white text-sm">
+                  Kovai Kalaimagal College of Arts and Science — Blockchain Certificate Verification System
+                </h3>
+                <span className="text-xs font-mono text-cyan-400 font-bold">Institutional Security / Web3</span>
+              </div>
+              <p className="text-xs font-mono text-[#c8c5cb]/90">
+                Python, Blockchain, SHA-256 Hashing, ECDSA Signatures, Merkle Tree, FastAPI, QR Verification
+              </p>
+              <ul className="text-xs sm:text-sm text-[#e5e2e1]/85 space-y-1 list-disc list-inside leading-relaxed">
+                <li>
+                  Engineered an immutable blockchain verification ledger and anti-forgery credential architecture for Kovai Kalaimagal College of Arts and Science (KKCAS), recording degree records on a tamper-proof distributed ledger.
+                </li>
+                <li>
+                  Integrated cryptographic <strong>SHA-256 document hashing</strong> and Merkle-tree verification, ensuring 100% deterministic detection against transcript grade alterations and fraudulent certificates.
+                </li>
+                <li>
+                  Implemented institutional authority ECDSA multi-key signing and public QR code verification with sub-second verification latency (<strong>&lt; 0.8s</strong>).
                 </li>
               </ul>
             </div>
